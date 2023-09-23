@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@keyframes prac{
+    0%{
+        right: -150x;
+    }
+    25%{
+        right: 25%;
+    }
+    50%{
+        right: 50%;
+    }
+    100%{
+        right: 100%;
+    }
+}   
+.image-div{
+    position: relative;
+    width: 100%;
+    height: 500px;    
+    background-image: url("https://img.freepik.com/free-photo/forest-road_1112-1836.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.image-div img{
+    width: 150px;
+    height: 150px;
+    position: absolute;    
+    top: 320px;
+    right:0px;
+    
+    animation-name: prac;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes prac1{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+} 
+@keyframes prac2{
+    0%{
+        right: 0px;
+    }   
+    25%{
+        right: 25%;
+    }
+    50%{
+        right: 50%;
+    } 
+    100%{
+        right: 100%;
+    }
+}  
+.wheel{
+    position: absolute;
+    top: 400px;
+    right: 0px;    
+    width: 125px;
+    height: 45px;
+   
+    animation-name: prac2;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  
+}
+
+img.back{
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    animation-name: prac1;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}  
+
+img.front{    
+    position: absolute;
+    right:100px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;   
+    animation-name: prac1;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
