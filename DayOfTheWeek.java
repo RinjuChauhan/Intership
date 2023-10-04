@@ -1,5 +1,22 @@
 	/* (Year Code + Month Code + Century Code + Date Number - Leap Year Code) mod 7
-	 */
+	The input is given as three integers representing the day, month and year respectively.
+
+Return the answer as one of the following values {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"}.
+
+Example :
+
+Input: day = 31, month = 8, year = 2019
+Output: "Saturday"
+
+Input: day = 18, month = 7, year = 1999
+Output: "Sunday"
+
+Input: day = 15, month = 8, year = 1993
+Output: "Sunday"
+
+The given dates are valid dates between the years 1971 and 2100.
+	 
+  */
 
 package com.java.FlipRoboHW1;
 import java.util.*;
@@ -9,6 +26,8 @@ public class DayOfTheWeek {
 	public static int fn(int n) {
 		int centuryCode1 = 0; //for 1900
 		int centuryCode2 = 6;  //for 2000
+		int centuryCode3 = 4;  //for 2100
+		
 		int century=0;
 		
 		if(n/100 == 19)
@@ -19,6 +38,10 @@ public class DayOfTheWeek {
 		if(n/100 == 20)
 			{
 			century = 6;
+			}
+		if(n/100 == 21)
+			{
+			century = 4;
 			}
 		return century;
 	}
