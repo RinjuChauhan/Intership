@@ -109,7 +109,7 @@ public class DayOfTheWeek {
 			leapYearCode = 0;
 			
 			if( ((year%4==0) || (year%100==0 && year%400==0)) && 
-					( monthCode == 1 || monthCode == 2) ) {
+					( month == 1 || month == 2) ) {
 				
 					leapYearCode = 1;}
 				
